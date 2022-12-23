@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #E9F5FE;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+span {
+    display: inline-block;
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+  padding: 18px 26px;
+  border-radius: 28px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.btn span {
+    pointer-events: none;
+}
+
+.btn.btn--main {
+    --bg-color: #D7EBFE;
+    --ease: cubic-bezier(0.65, 0, 0.35, 1);
+    --duration: 0.8s;
+    
+    overflow: hidden;
+    position: relative;
+    padding-left: calc(52px + 24px);
+
+    background-color: var(--bg-color);
+
+    transition: background-color var(--duration) var(--ease);
+}
+
+.btn.btn--main .emoji-container {
+    --bg-color: #318EFA;
+    --gap: 3px;
+    --wrapper-size: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: var(--gap);
+    transform: translateY(-50%) rotate(0);
+    transform-origin: center;
+    width: var(--wrapper-size);
+    height: var(--wrapper-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    background-color: var(--bg-color);
+
+    transition: background-color var(--duration) var(--ease), left var(--duration) var(--ease), transform var(--duration) var(--ease);
+    z-index: 1;
+}
+
+.btn.btn--main .emoji-wrapper {
+    position: absolute;
+    top: calc(50% + 1px);
+    transform: translateY(-50%);
+}
+
+.btn.btn--main .emoji {
+    font-size: 24px;
+    transition: opacity var(--duration) var(--ease);
+}
+
+.btn.btn--main .emoji--start {
+    font-size: 24px;
+    opacity: 1;
+}
+
+.btn.btn--main .emoji--end {
+    font-size: 24px;
+    opacity: 0;
+    transform: rotate(180deg);
+    transform-origin: center;
+}
+
+.btn.btn--main .btn--main__text-start {
+    --text-color: #1B2740;
+
+    color: var(--text-color);
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform calc(var(--duration) * 1.1) var(--ease), opacity calc(var(--duration) * 1.1) var(--ease);
+}
+
+.btn.btn--main .btn--main__text-end {
+    --text-color: #fff;
+    --padding-left: 24px;
+
+    position: absolute;
+    top: 50%;
+    left: var(--padding-left);
+    color: var(--text-color);
+    transform: translateY(-50%) translateX(-50%);
+    opacity: 0;
+    transition: transform calc(var(--duration) * 1.1) var(--ease), opacity calc(var(--duration) * 1.1) var(--ease);
+}
+
+.btn.btn--main:hover {
+    --bg-color: #318EFA;
+}
+
+.btn.btn--main:hover .emoji-container {
+    --bg-color: #fff;
+    
+    left: calc(100% - var(--wrapper-size) - var(--gap));
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.btn.btn--main:hover .emoji--start {
+    opacity: 0;
+}
+
+.btn.btn--main:hover .emoji--end {
+    opacity: 1;
+}
+
+.btn.btn--main:hover .btn--main__text-start {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.btn.btn--main:hover .btn--main__text-end {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+}
