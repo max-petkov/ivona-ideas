@@ -5,6 +5,10 @@
   font-family: inherit;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
   font-family: "DM Sans", sans-serif;
   background-color: #E9F5FE;
@@ -32,6 +36,52 @@ span {
   width: 100%;
   margin: 0 auto;
 }
+
+/* Neural Links */
+.container--neural-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neural-links__svg {
+    height: clamp(26.2rem, calc(26.2rem + ((1vw - 0.48rem) * 18.2639)), 52.5rem);
+}
+
+.neural-links__card {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Need to change... */
+    width: clamp(8rem, calc(8rem + ((1vw - 0.48rem) * 12.2222)), 25.6rem);
+    height: clamp(8rem, calc(8rem + ((1vw - 0.48rem) * 12.2222)), 25.6rem);
+    border-radius: 24px;
+    background-color: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.neural-links__card.is-hidden {
+    opacity: 0;
+}
+
+/* Glowing Orb */
+.neural-links__orb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px #2e80f9, inset 0 0 8px #2e80f9;
+    margin: 0 auto;
+}
+
+.neural-links__orb.is-hidden {
+    opacity: 0 !important;
+}
+
 
 /* Buttons */
 .btn {
