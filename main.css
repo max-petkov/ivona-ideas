@@ -37,6 +37,12 @@ span {
   margin: 0 auto;
 }
 
+/* Hero */
+.hero {
+    padding: clamp(4rem, calc(4rem + ((1vw - 0.48rem) * 15.625)), 14rem) 0;
+    min-height: 0vw;
+}
+
 /* Neural Links */
 .container--neural-links {
     display: flex;
@@ -59,6 +65,7 @@ span {
     border-radius: 24px;
     background-color: #fff;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    /* Need to change... */
 }
 
 .neural-links__card.is-hidden {
