@@ -13,7 +13,30 @@
 </head>
 
 <body>
-    <section>
+    <nav class="nav">
+        <div class="nav__container">
+            <p>menu</p>
+            <span class="nav__btn-close">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.98486 7.01001L4.92353 3.97835L7.9542 0.920347L7.0102 -0.0153198L3.9802 3.04435L0.92153 0.0150135L-0.0151367 0.95168L3.04686 3.98668L0.0151966 7.04801L0.951863 7.98468L3.9892 4.92068L7.0492 7.95401L7.98486 7.01001Z"
+                        fill="#314455" />
+                </svg>
+            </span>
+            <ul>
+                <li>
+                    <a href="#btn">Fancy Button</a>
+                </li>
+                <li>
+                    <a href="#neural">Neural Links</a>
+                </li>
+                <li>
+                    <a href="#hero">Hero Image</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="btn" class="fancy-button">
         <a href="#" class="btn btn--main">
             <span class="emoji-container">
                 <span class="emoji-wrapper">
@@ -27,7 +50,7 @@
             <span class="btn--main__text-end">Get started</span>
         </a>
     </section>
-    <section class="neural-links">
+    <section id="neural" class="neural-links">
         <div class="container container--neural-links">
             <svg class="neural-links__svg" width="100%" height="525" viewBox="0 0 877 525" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -95,23 +118,21 @@
             </div>
         </div>
     </section>
-
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="container">
-            <svg width="100%" height="100%" viewBox="0 0 1117 1296" fill="black" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg class="hero__svg" width="100%" height="100%" viewBox="0 0 1117 1034" fill="black"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <mask id="shapeMask" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1117"
-                    height="1296">
-                    <path
+                    height="1034">
+                    <path class="hero__svg-shape"
                         d="M1114.97 564.316C1099.83 461.538 1004.24 390.488 901.447 405.623L718.477 432.564L829.942 321.11C903.408 247.652 903.408 128.553 829.942 55.094C756.475 -18.3646 637.363 -18.3647 563.897 55.0939L55.0998 563.836C-18.3666 637.295 -18.3666 756.394 55.0998 829.853C95.9629 870.712 150.946 888.841 204.343 884.25C217.457 885.119 230.86 884.623 244.392 882.632L393.347 860.7L279.145 974.889C205.679 1048.35 205.679 1167.45 279.145 1240.91C352.611 1314.36 471.724 1314.36 545.19 1240.91L1053.63 732.523C1099.49 691.811 1124.57 629.511 1114.97 564.316Z"
-                        fill="#171717"/>
+                        fill="#171717" />
                 </mask>
 
                 <g mask="url(#shapeMask)">
-                    <rect class="test-animation-rect" x="0" y="0" width="100%" height="1034" fill="#2968F6" />
+                    <rect x="0" y="0" width="100%" height="1034" fill="#2968F6" />
                 </g>
-
-                <image mask="url(#shapeMask)" width="639" height="807" x="277" y="227" xlink:href="./img/hero.png" />
+                <image class="hero__svg-model" mask="url(#shapeMask)" width="639" height="807" x="277" y="227" xlink:href="./img/hero.png" />
             </svg>
         </div>
     </section>
